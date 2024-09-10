@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=4 uid="uid://i3qkrq4k5oqy"]
+[gd_scene load_steps=6 format=4 uid="uid://i3qkrq4k5oqy"]
 
 [ext_resource type="PackedScene" uid="uid://bxb4cyr0h0v56" path="res://Scenes/player.tscn" id="1_hufaq"]
 [ext_resource type="Texture2D" uid="uid://c4b0m8v5i7syx" path="res://Assets/Images/Ground.png" id="2_wnktw"]
+[ext_resource type="PackedScene" uid="uid://v3m7ukrnrsue" path="res://Scenes/bg.tscn" id="3_xtjry"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oeq76"]
 texture = ExtResource("2_wnktw")
@@ -231,9 +232,13 @@ sources/1 = SubResource("TileSetAtlasSource_oeq76")
 [node name="Main" type="Node"]
 
 [node name="Player" parent="." instance=ExtResource("1_hufaq")]
-position = Vector2(222, 172)
+z_index = -1
+position = Vector2(34, 593)
 
 [node name="Ground" type="TileMapLayer" parent="."]
 scale = Vector2(0.4, 0.4)
 tile_map_data = PackedByteArray("AAABAAwAAQAAAAEAAAACAAwAAQAAAAEAAAADAAwAAQAAAAEAAAAEAAwAAQAAAAEAAAAFAAwAAQAAAAEAAAAGAAwAAQAAAAEAAAAHAAwAAQAAAAEAAAAIAAwAAQAAAAoAAGAJAAwAAQABAAAAAAAKAAwAAQABAAAAAAALAAwAAQABAAAAAAAMAAwAAQABAAAAAAANAAwAAQAAAAoAAAAOAAwAAQAAAAEAAAAPAAwAAQAFAAgAAAAQAAwAAQAAAAEAAAARAAwAAQAAAAEAAAASAAwAAQAAAAEAAAATAAwAAQAAAAEAAAAUAAwAAQABAAAAAAAVAAwAAQAAAAEAAAAWAAwAAQAAAAAAAAAAAAwAAQAAAAIAAAAJAAsAAQAAAAkAAAAMAAsAAQAAAAoAAAAIAAsAAQAAAAMAAAAJAAoAAQAAAAMAAAANAAsAAQAAAAQAAAAMAAoAAQAAAAQAAAALAAoAAQAAAAEAAAAKAAoAAQAAAAEAAAALAAsAAQABAAAAAAAKAAsAAQABAAAAAAAOAAgAAQAEAA8AAAAPAAgAAQAEAAkAAAAQAAgAAQAEAA0AAAAPAAsAAQAFAAgAAAAPAAoAAQAFAAgAAAAPAAkAAQAFAAgAAAATAAYAAQAAAAcAAAAUAAYAAQAAAAEAAAAVAAYAAQAAAAUAAAAUAAcAAQABAAAAAAAUAAgAAQABAAAAAAAUAAkAAQABAAAAAAAUAAoAAQABAAAAAAAUAAsAAQABAAAAAAA=")
 tile_set = SubResource("TileSet_1hcup")
+
+[node name="Bg" parent="." instance=ExtResource("3_xtjry")]
+z_index = -2
