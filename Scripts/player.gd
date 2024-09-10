@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var score:int = 0
+var coins_collected:int = 0
 
 const SPEED = 400.0
 const JUMP_VELOCITY = -575.0
