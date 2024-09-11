@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://cx4dtr017mw66"]
+[gd_scene load_steps=9 format=3 uid="uid://cx4dtr017mw66"]
 
 [ext_resource type="Texture2D" uid="uid://ssxtc5ekthpt" path="res://Assets/Images/Items/Key.png" id="1_da1md"]
 [ext_resource type="Script" path="res://Scripts/key.gd" id="1_y64ad"]
+[ext_resource type="AudioStream" uid="uid://coo06o5f16fh0" path="res://Assets/Audio/KeyCollected.wav" id="3_f0ete"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_b7m6r"]
 radius = 26.5707
@@ -115,6 +116,9 @@ libraries = {
 }
 autoplay = "Idle"
 speed_scale = 3.0
+
+[node name="KeyCollected" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_f0ete")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

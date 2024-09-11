@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://cknbwkrcpt081"]
+[gd_scene load_steps=8 format=3 uid="uid://cknbwkrcpt081"]
 
 [ext_resource type="Script" path="res://Scripts/coin.gd" id="1_3qn2a"]
 [ext_resource type="Texture2D" uid="uid://cdv15giwrscni" path="res://Assets/Images/Items/Coin.png" id="2_61ipv"]
+[ext_resource type="AudioStream" uid="uid://ds4b3ow84hwgr" path="res://Assets/Audio/CoinCollected.wav" id="3_0p4wi"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qa7wp"]
 radius = 19.0
@@ -85,6 +86,9 @@ libraries = {
 "": SubResource("AnimationLibrary_bvbna")
 }
 speed_scale = 3.0
+
+[node name="CoinCollected" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_0p4wi")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

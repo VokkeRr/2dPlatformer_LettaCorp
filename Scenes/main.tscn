@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://i3qkrq4k5oqy"]
+[gd_scene load_steps=13 format=4 uid="uid://i3qkrq4k5oqy"]
 
 [ext_resource type="PackedScene" uid="uid://bxb4cyr0h0v56" path="res://Scenes/player.tscn" id="1_hufaq"]
 [ext_resource type="FontFile" uid="uid://dc4awbcbx4x5w" path="res://Assets/FredokaOne-Regular.ttf" id="1_t3yxp"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cknbwkrcpt081" path="res://Scenes/coin.tscn" id="4_iartr"]
 [ext_resource type="PackedScene" uid="uid://cx4dtr017mw66" path="res://Scenes/key.tscn" id="8_312g1"]
 [ext_resource type="PackedScene" uid="uid://1pq7xmswu6jp" path="res://Scenes/pad_lock.tscn" id="9_etute"]
+[ext_resource type="AudioStream" uid="uid://cg4bs2v4ro230" path="res://Assets/Audio/GameStarted.wav" id="10_s5563"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oeq76"]
 texture = ExtResource("2_wnktw")
@@ -316,3 +317,7 @@ position = Vector2(556, 477)
 
 [node name="PadLock" parent="." instance=ExtResource("9_etute")]
 position = Vector2(38, 582)
+
+[node name="GameStarter" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_s5563")
+autoplay = true

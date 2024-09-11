@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bg2wgacd8wkur"]
+[gd_scene load_steps=5 format=3 uid="uid://bg2wgacd8wkur"]
 
 [ext_resource type="Script" path="res://Scripts/level_completed.gd" id="1_1m8fw"]
 [ext_resource type="PackedScene" uid="uid://v3m7ukrnrsue" path="res://Scenes/bg.tscn" id="2_a0fq7"]
 [ext_resource type="FontFile" uid="uid://dc4awbcbx4x5w" path="res://Assets/FredokaOne-Regular.ttf" id="3_criav"]
+[ext_resource type="AudioStream" uid="uid://cc4ef6rll12a4" path="res://Assets/Audio/LevelCompleted.wav" id="4_5u3rd"]
 
 [node name="LevelCompleted" type="Control"]
 layout_mode = 3
@@ -68,6 +69,10 @@ theme_override_constants/outline_size = 15
 theme_override_fonts/font = ExtResource("3_criav")
 theme_override_font_sizes/font_size = 60
 text = "Menu"
+
+[node name="LevelCompleted" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_5u3rd")
+autoplay = true
 
 [connection signal="pressed" from="VBoxContainer/RepeatButton" to="." method="_on_repeat_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/MenuButton" to="." method="_on_menu_button_pressed"]
