@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 var coins_collected:int = 0
+var key_collected:bool = false
 
 const SPEED = 400.0
 const JUMP_VELOCITY = -575.0
